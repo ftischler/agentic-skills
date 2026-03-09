@@ -1,48 +1,21 @@
-# agentic-skills
+# Skills and MCPs for Agents worth sharing
 
-A personal collection of agentic skills and MCP server configuration for [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [GitHub Copilot](https://docs.github.com/en/copilot).
+## Skills
 
-## Repository Structure
+### Own skills
 
-```
-agentic-skills/
-├── claude-code/
-│   └── commands/       # Claude Code slash commands (.md files)
-├── copilot/
-│   └── agents/         # Copilot custom agent definitions (.md files)
-└── mcp/
-    ├── config.json     # MCP server configuration
-    └── README.md       # Per-server setup notes
-```
+Find them [here](./skills/)
 
-## Usage
+### Community skills
 
-### Claude Code
+- Awesome claude skills: https://github.com/BehiSecc/awesome-claude-skills?tab=readme-ov-file
+- Skill-creator: https://github.com/anthropics/skills/tree/main/skills/skill-creator
+- Angular skills: https://github.com/analogjs/angular-skills
+- Antropic skills: https://github.com/anthropics/skills/tree/main/skills
+- Playwright CLI (including skills): https://github.com/microsoft/playwright-cli
 
-Copy (or symlink) the files from `claude-code/commands/` into your project's `.claude/commands/` directory, or into `~/.claude/commands/` to make them available globally.
+## MCPs
 
-```bash
-# Copy all commands into a project
-cp -r claude-code/commands/ /path/to/project/.claude/commands/
-
-# Or symlink a single command
-ln -s $(pwd)/claude-code/commands/my-command.md /path/to/project/.claude/commands/my-command.md
-```
-
-### GitHub Copilot
-
-Copy the files from `copilot/agents/` into your project's `.github/agents/` directory.
-
-```bash
-cp -r copilot/agents/ /path/to/project/.github/agents/
-```
-
-### MCP Configuration
-
-See [`mcp/README.md`](mcp/README.md) for per-server setup instructions.  
-Copy `mcp/config.json` as a starting point and adjust to your environment:
-
-```bash
-# Claude Code reads MCP config from the project root or ~/.claude/
-cp mcp/config.json /path/to/project/.claude/mcp.json
-```
+- Agentic Tools including agentic memory: https://github.com/Pimzino/agentic-tools-mcp
+- Google Chrome DevTools MCP: https://github.com/ChromeDevTools/chrome-devtools-mcp
+  (Do not install playwright-cli skills and Google Chrome DevTools MCP along in one project, this will confuse the agent)
